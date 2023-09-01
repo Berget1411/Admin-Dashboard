@@ -171,6 +171,24 @@ header img {
 }
 
 main {
+  padding: 30px 20px;
   background-color: #e8e6e6;
   grid-area: main;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 200px;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.trending {
+  grid-area: trending;
 }
