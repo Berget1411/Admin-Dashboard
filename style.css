@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template: 200px 1fr / 200px 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar projects";
+}
+
+header {
+  background-color: white;
+  grid-area: header;
+}
+
+.sidebar {
+  background-color: rgb(95, 172, 255);
+  grid-area: sidebar;
+  height: 100vh;
+}
+
+.projects {
+  background-color: #e8e6e6;
+  grid-area: projects;
+}
