@@ -1,3 +1,10 @@
+:root {
+  --white-for-svg: invert(97%) sepia(0%) saturate(14%) hue-rotate(269deg)
+    brightness(104%) contrast(103%);
+  --primary-text-color: black;
+  --secondary-text-color: white;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,6 +28,49 @@ header {
   background-color: rgb(95, 172, 255);
   grid-area: sidebar;
   height: 100vh;
+}
+
+.banner {
+  padding: 10px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.banner h1 {
+  color: var(--secondary-text-color);
+}
+
+.banner img {
+  width: 50px;
+  filter: var(--white-for-svg);
+}
+
+.sidebar ul {
+  padding: 20px;
+  margin-top: 20px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.sidebar li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+}
+
+.sidebar li p {
+  color: var(--secondary-text-color);
+  font-size: 1.1em;
+}
+
+.sidebar ul img {
+  width: 20px;
+  filter: var(--white-for-svg);
 }
 
 .projects {
