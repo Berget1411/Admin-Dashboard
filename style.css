@@ -3,6 +3,8 @@
     brightness(104%) contrast(103%);
   --primary-text-color: black;
   --secondary-text-color: white;
+  --primary-background-color: white;
+  --secondary-background-color: rgb(95, 172, 255);
 }
 
 * {
@@ -13,19 +15,112 @@
 
 body {
   display: grid;
-  grid-template: 200px 1fr / 200px 1fr;
+  grid-template: 140px 1fr / 200px 1fr;
   grid-template-areas:
     "sidebar header"
     "sidebar projects";
 }
 
 header {
+  padding: 0px 40px;
   background-color: white;
   grid-area: header;
+  display: grid;
+  grid-row: auto auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+header img {
+  width: 20px;
+}
+
+.header-up {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  align-items: center;
+  gap: 80px;
+}
+
+.header-up .search {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-up input {
+  height: 25px;
+  border: none;
+  background-color: rgb(237, 237, 237);
+  border-radius: 28px;
+}
+
+.header-up .profile {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-items: center;
+  gap: 5px;
+}
+
+.header-up #user-profile {
+  width: 35px;
+  border-radius: 50%;
+}
+
+.header-up p {
+  font-weight: bold;
+}
+
+.header-down {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 150px;
+  align-items: center;
+  justify-items: center;
+}
+
+.header-down .greeting {
+  display: grid;
+  grid-template-columns: auto 260px;
+  gap: 20px;
+}
+
+.greeting p:first-of-type {
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.greeting p:last-of-type {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.header-down img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.header-down .new-upload-share {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+
+.header-down .new-upload-share button {
+  width: 90px;
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+
+  background-color: var(--secondary-background-color);
+  color: var(--secondary-text-color);
 }
 
 .sidebar {
-  background-color: rgb(95, 172, 255);
+  background-color: var(--secondary-background-color);
   grid-area: sidebar;
   height: 100vh;
 }
