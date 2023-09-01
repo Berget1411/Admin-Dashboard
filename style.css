@@ -15,7 +15,7 @@
 
 body {
   display: grid;
-  grid-template: 140px 1fr / 200px 1fr;
+  grid-template: 140px 1fr / 240px 1fr;
   grid-template-areas:
     "sidebar header"
     "sidebar projects";
@@ -145,7 +145,8 @@ header img {
 
 .sidebar ul {
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 25px;
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
@@ -161,6 +162,7 @@ header img {
 .sidebar li p {
   color: var(--secondary-text-color);
   font-size: 1.1em;
+  font-weight: bold;
 }
 
 .sidebar ul img {
