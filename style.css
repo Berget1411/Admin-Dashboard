@@ -4,7 +4,7 @@
   --primary-text-color: black;
   --secondary-text-color: white;
   --primary-background-color: white;
-  --secondary-background-color: rgb(95, 172, 255);
+  --secondary-background-color: #64748b;
 }
 
 * {
@@ -15,6 +15,7 @@
 
 body {
   display: grid;
+  height: 100vh;
   grid-template: 140px 1fr / 240px 1fr;
   grid-template-areas:
     "sidebar header"
@@ -31,7 +32,13 @@ header {
 }
 
 header img {
-  width: 20px;
+  width: 22px;
+}
+
+#search-icon:hover,
+#bell-icon:hover {
+  filter: invert(31%) sepia(19%) saturate(445%) hue-rotate(175deg)
+    brightness(96%) contrast(90%);
 }
 
 .header-up {
@@ -117,6 +124,11 @@ header img {
 
   background-color: var(--secondary-background-color);
   color: var(--secondary-text-color);
+  transition: background-color 0.2s;
+}
+
+.header-down .new-upload-share button:hover {
+  background-color: #94a3b8;
 }
 
 .sidebar {
@@ -135,10 +147,17 @@ header img {
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 10px;
+  transition: filter 0.2s;
 }
 
-.banner h1 {
+.banner:hover {
+  filter: invert(99%) sepia(5%) saturate(1510%) hue-rotate(178deg)
+    brightness(93%) contrast(98%);
+}
+
+.banner h1 a {
   color: var(--secondary-text-color);
+  text-decoration: none;
 }
 
 .banner img {
@@ -159,13 +178,20 @@ header img {
 .sidebar li {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 20px;
+  gap: 18px;
+  transition: filter 0.2s;
 }
 
-.sidebar li p {
+.sidebar li a {
   color: var(--secondary-text-color);
   font-size: 1.1em;
+  text-decoration: none;
   font-weight: bold;
+}
+
+.sidebar li:hover {
+  filter: invert(99%) sepia(5%) saturate(1510%) hue-rotate(178deg)
+    brightness(93%) contrast(98%);
 }
 
 .sidebar ul img {
@@ -175,7 +201,7 @@ header img {
 
 main {
   padding: 30px 20px;
-  background-color: #e8e6e6;
+  background-color: #f3f4f6;
   grid-area: main;
   display: grid;
   grid-template: 1fr 1fr / 1fr 300px;
@@ -204,7 +230,7 @@ main {
   background-color: var(--primary-background-color);
   padding: 20px;
   border-radius: 8px;
-  border-left: 5px solid orange;
+  border-left: 5px solid var(--secondary-background-color);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -223,6 +249,12 @@ main {
 
 .project-card img {
   width: 20px;
+}
+
+.project-card img:hover {
+  filter: invert(31%) sepia(19%) saturate(445%) hue-rotate(175deg)
+    brightness(96%) contrast(90%);
+  cursor: pointer;
 }
 
 .announcements {
